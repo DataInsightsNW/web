@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <!-- mark -->
+  <g transform="translate(2,10) scale(1.375)">
+    <rect x="1" y="1" width="30" height="30" rx="8" fill="#0E1A24"/>
+    <g stroke="#334552" stroke-width="1">
+      <path d="M7 24h18M7 18.5h18M7 13h18M13 8v16M19 8v16"/>
+    </g>
+    <rect x="8" y="17" width="4" height="7" rx="1" fill="#2FB574"/>
+    <rect x="14" y="13" width="4" height="11" rx="1" fill="#2FB574"/>
+    <rect x="20" y="8" width="4" height="16" rx="1" fill="#F2C24B"/>
+  </g>
+  <!-- wordmark -->
+  <text x="64" y="31" font-family="'Space Grotesk','Inter',sans-serif" font-size="23" font-weight="700" letter-spacing="-0.5" fill="#0E1A24">Data Insights</text>
+  <text x="64" y="50" font-family="'Space Grotesk','Inter',sans-serif" font-size="13.5" font-weight="600" letter-spacing="2.5" fill="#0F7A52">NORTH WEST</text>
+</svg>
