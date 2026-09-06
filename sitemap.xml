@@ -1,18 +1,181 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://datainsightsnw.github.io/web/index.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://datainsightsnw.github.io/web/services.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://datainsightsnw.github.io/web/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Data Insights North West — Free Data Review</title>
+<meta name="description" content="Contact Data Insights North West for a free data review. Power BI and Excel reporting, automation and data analysis for businesses in Merseyside, the North West and UK-wide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://datainsightsnw.github.io/web/contact.html">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Data Insights North West",
+  "description": "Data analysis, Power BI and Excel reporting, report automation, reconciliation and discrepancy detection for businesses across the North West and UK-wide.",
+  "url": "https://datainsightsnw.github.io/web/",
+  "email": "enquiries@datainsightsnorthwest.co.uk",
+  "areaServed": ["Merseyside", "North West England", "United Kingdom"],
+  "knowsAbout": ["Power BI", "Excel", "Data analysis", "Report automation", "Data reconciliation", "Data consolidation"],
+  "serviceType": "Data analysis and reporting automation"
+}
+</script>
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="index.html" class="brand">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" fill="#0E1A24"/><g stroke="#334552" stroke-width="1"><path d="M7 24h18M7 18.5h18M7 13h18M13 8v16M19 8v16"/></g><rect x="8" y="17" width="4" height="7" rx="1" fill="#2FB574"/><rect x="14" y="13" width="4" height="11" rx="1" fill="#2FB574"/><rect x="20" y="8" width="4" height="16" rx="1" fill="#F2C24B"/></svg>
+        Data Insights North West
+      </a>
+      <div class="nav-links" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Book a call</a>
+      </div>
+      <button class="nav-toggle" id="navtoggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow"><b></b>Get in touch</span>
+      <h1>Let's find the quick wins in your data.</h1>
+      <p>Tell us what your reporting looks like today. We'll come back with where the time is going and what we'd tackle first — free, and no pressure.</p>
+    </div>
+  </section>
+
+  <section class="pad" style="padding-top:44px">
+    <div class="wrap">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="contact-panel">
+          <div class="form-status" id="status" role="status" aria-live="polite"></div>
+          <form id="enquiry" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="company">Company (optional)</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option>Not sure yet — help me work it out</option>
+                <option>Power BI reports (automated / static)</option>
+                <option>Excel reports or clean-up</option>
+                <option>Finding discrepancies or losses</option>
+                <option>Bank statement income reports</option>
+                <option>Data trends &amp; insights</option>
+                <option>Other data analysis</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="msg">Tell us a bit more</label>
+              <textarea id="msg" name="message" placeholder="e.g. a weekly sales report I rebuild by hand, plus two systems that never match up"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Request my free data review</button>
+            <p class="form-note">We'll only use your details to reply to this enquiry.</p>
+          </form>
+        </div>
+
+        <!-- INFO + WHAT NEXT -->
+        <div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h3>Email</h3><p>enquiries@datainsightsnorthwest.co.uk</p></div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.6-7-11a7 7 0 0114 0c0 5.4-7 11-7 11z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+            <div><h3>Based in</h3><p>Merseyside — working with businesses UK-wide, remotely.</p></div>
+          </div>
+          <div class="info-item">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h3>Response time</h3><p>We aim to reply within one working day.</p></div>
+          </div>
+
+          <h3 style="font-size:20px;margin:34px 0 4px">What happens next</h3>
+          <ul class="next-list">
+            <li><span class="n num">1</span><div>We read your message and reply with a couple of clarifying questions if we need them.</div></li>
+            <li><span class="n num">2</span><div>We book a short call to understand your data and what you're trying to achieve.</div></li>
+            <li><span class="n num">3</span><div>You get a plain-English summary of the quick wins and what we'd do first — no obligation.</div></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="8" fill="#0E1A24"/><g stroke="#334552" stroke-width="1"><path d="M7 24h18M7 18.5h18M7 13h18M13 8v16M19 8v16"/></g><rect x="8" y="17" width="4" height="7" rx="1" fill="#2FB574"/><rect x="14" y="13" width="4" height="11" rx="1" fill="#2FB574"/><rect x="20" y="8" width="4" height="16" rx="1" fill="#F2C24B"/></svg>
+      Data Insights North West
+    </a>
+    <nav class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <span>© <span class="num">2026</span> Data Insights North West · enquiries@datainsightsnorthwest.co.uk</span>
+  </div>
+</footer>
+
+<script>
+  var t=document.getElementById('navtoggle'),l=document.getElementById('navlinks');
+  t.addEventListener('click',function(){l.classList.toggle('open')});
+  l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open')})});
+
+  var form=document.getElementById('enquiry'), status=document.getElementById('status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    status.className='form-status';
+    // If Formspree isn't set up yet, fall back to opening an email
+    if(form.action.indexOf('YOUR_FORM_ID')>-1){
+      var body=encodeURIComponent(
+        'Name: '+form.name.value+'\nEmail: '+form.email.value+
+        '\nCompany: '+form.company.value+'\nService: '+form.service.value+
+        '\n\n'+form.message.value);
+      window.location.href='mailto:enquiries@datainsightsnorthwest.co.uk?subject='+encodeURIComponent('Data review enquiry')+'&body='+body;
+      return;
+    }
+    var btn=form.querySelector('button[type=submit]'); var label=btn.textContent; btn.textContent='Sending…'; btn.disabled=true;
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){
+          form.reset();
+          status.textContent='Thanks — your message is on its way. We\'ll be in touch within one working day.';
+          status.className='form-status ok';
+        }else{
+          status.textContent='Something went wrong sending that. Please email enquiries@datainsightsnorthwest.co.uk instead.';
+          status.className='form-status err';
+        }
+      })
+      .catch(function(){
+        status.textContent='Something went wrong sending that. Please email enquiries@datainsightsnorthwest.co.uk instead.';
+        status.className='form-status err';
+      })
+      .finally(function(){btn.textContent=label; btn.disabled=false;});
+  });
+</script>
+</body>
+</html>
