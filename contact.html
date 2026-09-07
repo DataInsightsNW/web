@@ -37,6 +37,7 @@
       <div class="nav-links" id="navlinks">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
+        <a href="faq.html">FAQ</a>
         <a href="contact.html" class="active">Contact</a>
         <a href="contact.html" class="btn btn-primary">Book a call</a>
       </div>
@@ -66,6 +67,8 @@
             <input type="hidden" name="access_key" value="f293c453-75a0-43d9-8c2e-3ee16400f954">
             <input type="hidden" name="subject" value="New enquiry from Data Insights North West website">
             <input type="hidden" name="from_name" value="Data Insights North West website">
+            <input type="hidden" name="replyto" value="email">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
             <div class="field">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" autocomplete="name" required>
@@ -137,6 +140,7 @@
     <nav class="foot-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </nav>
     <span>© <span class="num">2026</span> Data Insights North West · enquiries@datainsightsnorthwest.co.uk</span>
@@ -157,7 +161,7 @@
       .then(function(r){
         if(r.ok){
           form.reset();
-          status.textContent='Thanks — your message is on its way. We\'ll be in touch within one working day.';
+          status.innerHTML='<strong>Thank you \u2014 your enquiry has been sent.</strong><br>We\'ve received your message and will be in touch within one working day. A confirmation has been sent to your email.';
           status.className='form-status ok';
         }else{
           status.textContent='Something went wrong sending that. Please email enquiries@datainsightsnorthwest.co.uk instead.';
