@@ -121,9 +121,17 @@ slug can never collide with them.
 2. **No promised outcomes.** Describe what the work does, not results guaranteed.
 3. **Keep the sample-data disclosure** on every mockup, and the note at the top of
    `examples.html`.
-4. **No analytics or tracking without updating `privacy.html` first.** The site currently sets no
-   cookies, which is why it needs no cookie banner, and `privacy.html` and the FAQ both say so.
-   Adding anything that tracks visitors makes both statements false.
+4. **Analytics is Cloudflare Web Analytics, and it is cookieless — keep it that way.** The beacon
+   is emitted by the build only when `_src/analytics-token.txt` holds a 32-hex-character token,
+   so a half-configured build cannot ship a broken tag. The token is a public site identifier,
+   not a secret.
+   The site still sets **no cookies and no local storage**, which is the entire reason it needs no
+   cookie banner. `privacy.html` and the FAQ both state this explicitly, along with the aggregate-
+   only nature of the analytics and the `static.cloudflareinsights.com` opt-out.
+   **Anything that sets a cookie, uses local storage, tracks across sites, or does advertising or
+   remarketing makes those statements false and would require a consent banner under PECR.** If a
+   tracker like that is ever genuinely needed, update `privacy.html` and the FAQ answer *first*,
+   and expect to add a banner. Do not bolt on Google Analytics without doing that work.
 5. British English, and the business voice is **first person singular — "I", not "we"**. It's a
    sole trader, and "we" reads as a fake agency. Two exceptions, both deliberate:
    - **Client voice stays plural.** FAQ `<summary>` questions and their JSON-LD `"name"` fields

@@ -45,6 +45,30 @@ foreach ($need in 'head', 'header', 'footer', 'tail') {
     if (-not $partials.ContainsKey($need)) { throw "Missing partial: _src/partials/$need.html" }
 }
 
+# ---------------------------------------------------------------- analytics
+# Cloudflare Web Analytics beacon. Emitted only when _src/analytics-token.txt
+# exists and holds a token, so a half-configured build can never ship a broken
+# script tag — and so the privacy notice's claims stay true either way.
+#
+# The token is not a secret: it is a public site identifier that appears in the
+# page source by design, exactly like the Web3Forms access key.
+#
+# The site is NOT proxied through Cloudflare (the GitHub Pages DNS records are
+# grey-cloud / DNS-only), so the automatic server-side version is unavailable
+# and the JS beacon is the only option.
+$tokenFile = Join-Path $Src 'analytics-token.txt'
+$analytics = '<!-- analytics: not configured (no _src/analytics-token.txt) -->'
+if (Test-Path $tokenFile) {
+    $token = ((Get-Content $tokenFile -Raw) -replace '\s', '')
+    if ($token -match '^[0-9a-f]{32}$') {
+        $analytics = '<script defer src="https://static.cloudflareinsights.com/beacon.min.js" ' +
+                     "data-cf-beacon='{`"token`": `"$token`"}'></script>"
+    }
+    elseif ($token) {
+        throw "analytics-token.txt does not look like a Cloudflare Web Analytics token (expected 32 hex characters, got $($token.Length) chars)"
+    }
+}
+
 # ---------------------------------------------------------------- pages
 $pageFiles = @(Get-ChildItem (Join-Path $Src 'pages') -Filter *.html -Recurse | Sort-Object FullName)
 if (-not $pageFiles) { throw 'No pages found in _src/pages' }
@@ -116,7 +140,7 @@ foreach ($pf in $pageFiles) {
         $header
         $content.TrimEnd()
         $partials['footer']
-        $partials['tail']
+        $partials['tail'].Replace('{{ANALYTICS}}', $analytics)
         '</body>'
         '</html>'
     ) -join "`n"
