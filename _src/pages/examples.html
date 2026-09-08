@@ -1,0 +1,537 @@
+<!--
+title: Example Reports &amp; Dashboards | Power BI &amp; Excel Samples
+description: Working samples of the reports we build — an interactive Power BI dashboard with slicers, an Excel budget-versus-actual pack with variance flags, and before-and-after automation examples.
+slug: examples.html
+nav: examples
+priority: 0.9
+-->
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span><span>Examples</span>
+      </nav>
+      <span class="eyebrow">Example reports</span>
+      <h1>See exactly what you'd be getting.</h1>
+      <p class="lead">Most data websites ask you to imagine the output. These are working
+      samples — click the slicers, hover the bars, open the data table. Built the same way
+      yours would be.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="note">
+        <strong>About the data on this page.</strong> Every figure below is illustrative sample
+        data for a fictional North West wholesaler, created to demonstrate layout and
+        capability. It is not client data and does not represent any real business. Client work
+        is confidential and never published — see our <a href="/faq.html">FAQ</a> on
+        confidentiality.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== POWER BI DASHBOARD -->
+  <section id="dashboard" style="padding-top:24px">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Sample 1 &middot; Power BI</span>
+        <h2>An interactive Power BI dashboard.</h2>
+        <p>Slicers that genuinely filter every visual, KPI cards with real month-on-month
+        deltas, and a refresh stamp. This is the shape of a report you'd open on a Monday
+        morning — and the axis rescales when you filter, so a smaller slice never looks bigger
+        than it is.</p>
+      </div>
+
+      <div class="shell-scroll">
+        <div class="shell">
+          <div class="shell-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="name">NW Wholesale &mdash; Sales Performance <span class="app">&middot; Power BI</span></span>
+            <span class="spacer"></span>
+            <span class="chip">Refreshed today 06:00</span>
+          </div>
+
+          <div class="pbi">
+            <!-- Slicers -->
+            <div class="pbi-card">
+              <div class="pbi-slicers filters" data-slicer role="group" aria-label="Filter by region">
+                <span class="lbl">Region</span>
+                <button type="button" data-key="all" aria-pressed="true">All regions</button>
+                <button type="button" data-key="liverpool" aria-pressed="false">Liverpool</button>
+                <button type="button" data-key="manchester" aria-pressed="false">Manchester</button>
+                <button type="button" data-key="preston" aria-pressed="false">Preston</button>
+                <span class="spacer" style="margin-left:auto"></span>
+                <span style="font-size:11px;color:var(--text-3)" data-scope>All regions &middot; 12 months to Sep 2026</span>
+              </div>
+            </div>
+
+            <!-- KPI row -->
+            <div class="pbi-row k4">
+              <div class="pbi-card kpi" data-kpi="revenue" style="border-radius:6px">
+                <div class="k">Revenue &middot; 12 mo</div>
+                <div class="v">£2.13m</div>
+                <div class="d up">▲ +12.2%</div>
+              </div>
+              <div class="pbi-card kpi" data-kpi="orders" style="border-radius:6px">
+                <div class="k">Orders</div>
+                <div class="v">27,410</div>
+                <div class="d up">▲ +6.1%</div>
+              </div>
+              <div class="pbi-card kpi" data-kpi="aov" style="border-radius:6px">
+                <div class="k">Average order</div>
+                <div class="v">£77.67</div>
+                <div class="d up">▲ +5.7%</div>
+              </div>
+              <div class="pbi-card kpi" data-kpi="margin" style="border-radius:6px">
+                <div class="k">Gross margin</div>
+                <div class="v">31.3%</div>
+                <div style="font-size:11.5px;color:var(--text-3);margin-top:2px">vs 30.9% last year</div>
+              </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="pbi-row c2">
+              <div class="pbi-card">
+                <div class="h">Revenue by month</div>
+                <div class="s">Rolling 12 months &middot; hover a bar for the value</div>
+                <div class="plot">
+                  <svg viewBox="0 0 350 142" role="img" aria-label="Bar chart of revenue by month for the 12 months to September 2026, rising from £142,000 in October to £248,000 in September. Full figures are available in the data table below.">
+                    <line class="gridline" x1="30" y1="14"  x2="340" y2="14"/>
+                    <line class="gridline" x1="30" y1="66"  x2="340" y2="66"/>
+                    <line class="baseline" x1="30" y1="118" x2="340" y2="118"/>
+                    <text class="tick y" id="dash-y2" x="26" y="17.5">£250k</text>
+                    <text class="tick y" id="dash-y1" x="26" y="69.5">£125k</text>
+                    <text class="tick y" id="dash-y0" x="26" y="121.5">£0</text>
+
+                    <g fill="#0F7A52">
+                      <rect class="bar" data-bar x="30"     y="59.0"  width="17" height="59.0"/>
+                      <rect class="bar" data-bar x="56.64"  y="53.6"  width="17" height="64.4"/>
+                      <rect class="bar" data-bar x="83.27"  y="69.0"  width="17" height="49.0"/>
+                      <rect class="bar" data-bar x="109.91" y="56.1"  width="17" height="61.9"/>
+                      <rect class="bar" data-bar x="136.55" y="48.2"  width="17" height="69.8"/>
+                      <rect class="bar" data-bar x="163.18" y="46.5"  width="17" height="71.5"/>
+                      <rect class="bar" data-bar x="189.82" y="42.8"  width="17" height="75.2"/>
+                      <rect class="bar" data-bar x="216.45" y="44.9"  width="17" height="73.1"/>
+                      <rect class="bar" data-bar x="243.09" y="37.0"  width="17" height="81.0"/>
+                      <rect class="bar" data-bar x="269.73" y="33.2"  width="17" height="84.8"/>
+                      <rect class="bar" data-bar x="296.36" y="26.2"  width="17" height="91.8"/>
+                      <rect class="bar" data-bar x="323"    y="14.9"  width="17" height="103.1"/>
+                    </g>
+
+                    <text class="tick x" x="38.5"  y="132">Oct</text>
+                    <text class="tick x" x="65.1"  y="132">Nov</text>
+                    <text class="tick x" x="91.8"  y="132">Dec</text>
+                    <text class="tick x" x="118.4" y="132">Jan</text>
+                    <text class="tick x" x="145.1" y="132">Feb</text>
+                    <text class="tick x" x="171.7" y="132">Mar</text>
+                    <text class="tick x" x="198.3" y="132">Apr</text>
+                    <text class="tick x" x="225.0" y="132">May</text>
+                    <text class="tick x" x="251.6" y="132">Jun</text>
+                    <text class="tick x" x="278.2" y="132">Jul</text>
+                    <text class="tick x" x="304.9" y="132">Aug</text>
+                    <text class="tick x" x="331.5" y="132">Sep</text>
+
+                    <rect class="hit" data-barhit="0"  x="30"     y="14" width="26.6" height="104" data-tip="<b>Oct 2025</b><br>£142,000"/>
+                    <rect class="hit" data-barhit="1"  x="56.64"  y="14" width="26.6" height="104" data-tip="<b>Nov 2025</b><br>£155,000"/>
+                    <rect class="hit" data-barhit="2"  x="83.27"  y="14" width="26.6" height="104" data-tip="<b>Dec 2025</b><br>£118,000"/>
+                    <rect class="hit" data-barhit="3"  x="109.91" y="14" width="26.6" height="104" data-tip="<b>Jan 2026</b><br>£149,000"/>
+                    <rect class="hit" data-barhit="4"  x="136.55" y="14" width="26.6" height="104" data-tip="<b>Feb 2026</b><br>£168,000"/>
+                    <rect class="hit" data-barhit="5"  x="163.18" y="14" width="26.6" height="104" data-tip="<b>Mar 2026</b><br>£172,000"/>
+                    <rect class="hit" data-barhit="6"  x="189.82" y="14" width="26.6" height="104" data-tip="<b>Apr 2026</b><br>£181,000"/>
+                    <rect class="hit" data-barhit="7"  x="216.45" y="14" width="26.6" height="104" data-tip="<b>May 2026</b><br>£176,000"/>
+                    <rect class="hit" data-barhit="8"  x="243.09" y="14" width="26.6" height="104" data-tip="<b>Jun 2026</b><br>£195,000"/>
+                    <rect class="hit" data-barhit="9"  x="269.73" y="14" width="26.6" height="104" data-tip="<b>Jul 2026</b><br>£204,000"/>
+                    <rect class="hit" data-barhit="10" x="296.36" y="14" width="26.6" height="104" data-tip="<b>Aug 2026</b><br>£221,000"/>
+                    <rect class="hit" data-barhit="11" x="323"    y="14" width="17"   height="104" data-tip="<b>Sep 2026</b><br>£248,000"/>
+                  </svg>
+                  <div class="tip" role="presentation"></div>
+                </div>
+              </div>
+
+              <div class="pbi-card">
+                <div class="h">Revenue by product group</div>
+                <div class="s">Same measure, ranked &mdash; one colour, because these are four
+                slices of one number, not four different series</div>
+                <div style="margin-top:4px">
+                  <div class="cat-row" data-cat="0">
+                    <div class="cat-head"><span class="cat-name">Trade &amp; wholesale</span><span class="cat-val">£852k</span></div>
+                    <div class="cat-track"><div class="cat-fill" style="width:100%"></div></div>
+                  </div>
+                  <div class="cat-row" data-cat="1">
+                    <div class="cat-head"><span class="cat-name">Retail</span><span class="cat-val">£596k</span></div>
+                    <div class="cat-track"><div class="cat-fill" style="width:70%"></div></div>
+                  </div>
+                  <div class="cat-row" data-cat="2">
+                    <div class="cat-head"><span class="cat-name">Online</span><span class="cat-val">£447k</span></div>
+                    <div class="cat-track"><div class="cat-fill" style="width:52.5%"></div></div>
+                  </div>
+                  <div class="cat-row" data-cat="3">
+                    <div class="cat-head"><span class="cat-name">Contract</span><span class="cat-val">£234k</span></div>
+                    <div class="cat-track"><div class="cat-fill" style="width:27.5%"></div></div>
+                  </div>
+                </div>
+                <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--text-3)">
+                  Product groups reconcile to the revenue KPI for whichever region is selected.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="viz-foot" style="padding:14px 20px;border-top:1px solid var(--line);background:var(--surface)">
+            <span class="note-sm">Sample data &middot; a fictional wholesaler</span>
+            <button class="togg" type="button" data-toggle="#dash-table"
+                    data-label-show="Show data table" data-label-hide="Hide data table">Show data table</button>
+          </div>
+
+          <div id="dash-table" hidden style="border-top:1px solid var(--line);background:var(--surface)">
+            <div class="table-scroll" style="border:none;border-radius:0">
+              <table class="data">
+                <caption>Revenue by month for the current selection. Updates with the region slicer.</caption>
+                <thead>
+                  <tr><th scope="col">Month</th><th scope="col" class="n">Revenue</th></tr>
+                </thead>
+                <tbody>
+                  <tr><th scope="row">Oct 2025</th><td class="n" data-cell="0">£142k</td></tr>
+                  <tr><th scope="row">Nov 2025</th><td class="n" data-cell="1">£155k</td></tr>
+                  <tr><th scope="row">Dec 2025</th><td class="n" data-cell="2">£118k</td></tr>
+                  <tr><th scope="row">Jan 2026</th><td class="n" data-cell="3">£149k</td></tr>
+                  <tr><th scope="row">Feb 2026</th><td class="n" data-cell="4">£168k</td></tr>
+                  <tr><th scope="row">Mar 2026</th><td class="n" data-cell="5">£172k</td></tr>
+                  <tr><th scope="row">Apr 2026</th><td class="n" data-cell="6">£181k</td></tr>
+                  <tr><th scope="row">May 2026</th><td class="n" data-cell="7">£176k</td></tr>
+                  <tr><th scope="row">Jun 2026</th><td class="n" data-cell="8">£195k</td></tr>
+                  <tr><th scope="row">Jul 2026</th><td class="n" data-cell="9">£204k</td></tr>
+                  <tr><th scope="row">Aug 2026</th><td class="n" data-cell="10">£221k</td></tr>
+                  <tr><th scope="row">Sep 2026</th><td class="n" data-cell="11">£248k</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="sample-note">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5M10 6.4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        Try the region slicers — the KPIs, the monthly chart, its axis labels and the product
+        groups all move together, and every figure reconciles back to the revenue total.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================== EXCEL PACK -->
+  <section id="excel" class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Sample 2 &middot; Excel</span>
+        <h2>An Excel reporting pack that ties.</h2>
+        <p>Budget versus actual with variance in both pounds and per cent, in-cell data bars,
+        a status column that says what it means rather than relying on a colour, and a totals
+        row that adds up. Laid out so whoever picks it up next can follow it.</p>
+      </div>
+
+      <div class="shell-scroll">
+        <div class="shell">
+          <div class="shell-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="name">NW-Wholesale-Sales-Pack-Sep-2026.xlsx <span class="app">&middot; Excel</span></span>
+          </div>
+
+          <div class="xl">
+            <table class="xl-grid">
+              <caption class="visually-hidden">Sample branch budget versus actual for September 2026.</caption>
+              <thead class="cols">
+                <tr>
+                  <th class="col-head" scope="col"></th>
+                  <th class="col-head" scope="col">A</th>
+                  <th class="col-head" scope="col">B</th>
+                  <th class="col-head" scope="col">C</th>
+                  <th class="col-head" scope="col">D</th>
+                  <th class="col-head" scope="col">E</th>
+                  <th class="col-head" scope="col">F</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hdr">
+                  <th class="row-head" scope="row">4</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col" class="n">Budget</th>
+                  <th scope="col" class="n">Actual</th>
+                  <th scope="col" class="n">Var £</th>
+                  <th scope="col" class="n">Var %</th>
+                  <th scope="col">Status</th>
+                </tr>
+                <tr>
+                  <th class="row-head" scope="row">5</th>
+                  <td class="lbl">Liverpool</td>
+                  <td class="n">88,000</td>
+                  <td class="n databar"><span class="fill" style="width:44.3%;background:#6BBE9B"></span><span class="t">93,000</span></td>
+                  <td class="n pos">+5,000</td>
+                  <td class="n pos">+5.7%</td>
+                  <td>On track</td>
+                </tr>
+                <tr>
+                  <th class="row-head" scope="row">6</th>
+                  <td class="lbl">Manchester</td>
+                  <td class="n">98,000</td>
+                  <td class="n databar"><span class="fill" style="width:50%;background:#6BBE9B"></span><span class="t">105,000</span></td>
+                  <td class="n pos">+7,000</td>
+                  <td class="n pos">+7.1%</td>
+                  <td>Ahead of budget</td>
+                </tr>
+                <tr>
+                  <th class="row-head" scope="row">7</th>
+                  <td class="lbl flagged">Preston</td>
+                  <td class="n flagged">54,000</td>
+                  <td class="n databar flagged"><span class="fill" style="width:23.8%;background:#6BBE9B"></span><span class="t">50,000</span></td>
+                  <td class="n neg flagged">&minus;4,000</td>
+                  <td class="n neg flagged">&minus;7.4%</td>
+                  <td class="flagged">Behind &mdash; review</td>
+                </tr>
+                <tr class="total">
+                  <th class="row-head" scope="row">8</th>
+                  <td class="lbl">Total</td>
+                  <td class="n">240,000</td>
+                  <td class="n">248,000</td>
+                  <td class="n pos">+8,000</td>
+                  <td class="n pos">+3.3%</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="xl-tabs">
+              <span class="tab on">Summary</span>
+              <span class="tab">Branches</span>
+              <span class="tab">Reconciliation</span>
+              <span class="tab">Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:26px">
+        <div class="card">
+          <h3>Variance both ways</h3>
+          <p>Pounds <em>and</em> per cent. A &minus;7.4% miss on a small branch and a &minus;7.4%
+          miss on a large one are very different problems.</p>
+        </div>
+        <div class="card">
+          <h3>Status in words</h3>
+          <p>"Behind — review" is written out, not just shaded red, so the pack still works
+          printed, photocopied, or for a colour-blind reader.</p>
+        </div>
+        <div class="card">
+          <h3>A totals row that ties</h3>
+          <p>+5,000 +7,000 &minus;4,000 = +8,000, and 8,000 / 240,000 = 3.3%. If the total
+          doesn't reconcile, the report isn't finished.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================== BEFORE / AFTER -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Before &amp; after</span>
+        <h2>What automation actually changes.</h2>
+        <p>The reporting output can look identical. What changes is who builds it, how long it
+        takes, and whether you can trust it.</p>
+      </div>
+
+      <div class="ba">
+        <div class="ba-col before">
+          <span class="tag">Before</span>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.5v5M10 13.6h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Four exports pulled by hand every Monday</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.5v5M10 13.6h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Copy-paste into a master workbook</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.5v5M10 13.6h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Around three hours, every week</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.5v5M10 13.6h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>One person knows how it works</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M10 5.5v5M10 13.6h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Nobody's certain the totals are right</li>
+          </ul>
+        </div>
+
+        <div class="ba-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+
+        <div class="ba-col after">
+          <span class="tag">After</span>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sources connected once, refreshed on a schedule</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>The report is waiting before anyone starts work</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>No manual steps to forget or get wrong</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Documented, so it isn't in one person's head</li>
+            <li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Built-in reconciliation check on every refresh</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="results" style="margin-top:26px">
+        <div class="r"><div class="v">3 hrs → 0</div><div class="k">of manual build time each week</div></div>
+        <div class="r"><div class="v">138 hrs</div><div class="k">given back over a year (46 working weeks)</div></div>
+        <div class="r"><div class="v">1</div><div class="k">reconciled set of numbers, not four</div></div>
+      </div>
+      <p class="sample-note">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M10 9v5M10 6.4h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        An illustrative scenario, not a client case study. Work out the figures for your own
+        reporting with the <a href="/roi-calculator.html" class="tlink">hours-saved calculator</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================== WHAT WE CAN BUILD -->
+  <section class="tint">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Other formats</span>
+        <h2>Reports come in the shape that suits the job.</h2>
+        <p>Not everything belongs in a dashboard. Part of the work is picking the right output
+        for who's reading it.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 15l3-3 3 2 4-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Board and management packs</h3>
+          <p>A fixed, point-in-time PDF or deck for a monthly meeting — consistent every month
+          so figures are comparable across the year.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 8l8 5.5L20 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Scheduled email reports</h3>
+          <p>The numbers land in the inbox of whoever needs them, at the time they need them,
+          without anyone logging into anything.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Reconciliation reports</h3>
+          <p>A standing check that two or more systems still agree — and a clear list of the
+          records that don't, with the reason why.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 14.5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h3>Bank statement income reports</h3>
+          <p>Raw statements turned into categorised income and outgoings — for affordability,
+          lending, or a true picture of the money.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V9M10 20V4M16 20v-8M22 20H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>One-off deep dives</h3>
+          <p>A single question answered properly: where did the margin go, which customers are
+          really profitable, why did last quarter miss.</p>
+        </div>
+        <div class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3a9 9 0 109 9h-9V3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <h3>Excel model rebuilds</h3>
+          <p>An inherited workbook nobody trusts, rebuilt so the formulas are auditable and the
+          numbers can be defended.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta">
+        <h2>Want to see one of these built with your data?</h2>
+        <p>Send over a report you rebuild by hand. We'll show you what it looks like automated
+        — free, and with no obligation to go further.</p>
+        <div class="btn-row" style="justify-content:center">
+          <a href="/contact.html" class="btn btn-primary btn-lg">Book a free data review</a>
+          <a href="/pricing.html" class="btn btn-ghost btn-lg">See pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://datainsightsnorthwest.co.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Example reports", "item": "https://datainsightsnorthwest.co.uk/examples.html" }
+    ]
+  }
+  </script>
+
+  <!-- Dashboard dataset. Regions sum to the monthly totals, monthly totals sum
+       to the 12-month revenue, and revenue / orders gives the average order —
+       so any slice the visitor picks still reconciles. -->
+  <script type="application/json" id="dash-data">
+  {
+    "all": {
+      "scope": "All regions · 12 months to Sep 2026",
+      "kpis": {
+        "revenue": { "v": 2129000, "d": 12.2, "f": "gbp" },
+        "orders":  { "v": 27410,   "d": 6.1,  "f": "num" },
+        "aov":     { "v": 77.67,   "d": 5.7,  "f": "gbp2" },
+        "margin":  { "v": 31.3,    "d": 0,    "f": "pct" }
+      },
+      "months": [142000,155000,118000,149000,168000,172000,181000,176000,195000,204000,221000,248000],
+      "labels": ["Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026"],
+      "categories": [
+        { "name": "Trade & wholesale", "value": 852000, "share": 100 },
+        { "name": "Retail",            "value": 596000, "share": 70.0 },
+        { "name": "Online",            "value": 447000, "share": 52.5 },
+        { "name": "Contract",          "value": 234000, "share": 27.5 }
+      ]
+    },
+    "liverpool": {
+      "scope": "Liverpool · 12 months to Sep 2026",
+      "kpis": {
+        "revenue": { "v": 809000, "d": 10.7, "f": "gbp" },
+        "orders":  { "v": 10420,  "d": 5.4,  "f": "num" },
+        "aov":     { "v": 77.64,  "d": 5.0,  "f": "gbp2" },
+        "margin":  { "v": 30.8,   "d": 0,    "f": "pct" }
+      },
+      "months": [54000,59000,45000,57000,64000,65000,69000,67000,74000,78000,84000,93000],
+      "labels": ["Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026"],
+      "categories": [
+        { "name": "Trade & wholesale", "value": 340000, "share": 100 },
+        { "name": "Retail",            "value": 219000, "share": 64.4 },
+        { "name": "Online",            "value": 162000, "share": 47.6 },
+        { "name": "Contract",          "value": 88000,  "share": 25.9 }
+      ]
+    },
+    "manchester": {
+      "scope": "Manchester · 12 months to Sep 2026",
+      "kpis": {
+        "revenue": { "v": 915000, "d": 10.5, "f": "gbp" },
+        "orders":  { "v": 11760,  "d": 5.8,  "f": "num" },
+        "aov":     { "v": 77.81,  "d": 4.4,  "f": "gbp2" },
+        "margin":  { "v": 32.6,   "d": 0,    "f": "pct" }
+      },
+      "months": [61000,67000,51000,64000,72000,74000,78000,76000,84000,88000,95000,105000],
+      "labels": ["Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026"],
+      "categories": [
+        { "name": "Trade & wholesale", "value": 348000, "share": 100 },
+        { "name": "Retail",            "value": 265000, "share": 76.1 },
+        { "name": "Online",            "value": 210000, "share": 60.3 },
+        { "name": "Contract",          "value": 92000,  "share": 26.4 }
+      ]
+    },
+    "preston": {
+      "scope": "Preston · 12 months to Sep 2026",
+      "kpis": {
+        "revenue": { "v": 405000, "d": 19.0, "f": "gbp" },
+        "orders":  { "v": 5230,   "d": 8.9,  "f": "num" },
+        "aov":     { "v": 77.44,  "d": 9.3,  "f": "gbp2" },
+        "margin":  { "v": 29.1,   "d": 0,    "f": "pct" }
+      },
+      "months": [27000,29000,22000,28000,32000,33000,34000,33000,37000,38000,42000,50000],
+      "labels": ["Oct 2025","Nov 2025","Dec 2025","Jan 2026","Feb 2026","Mar 2026","Apr 2026","May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026"],
+      "categories": [
+        { "name": "Trade & wholesale", "value": 164000, "share": 100 },
+        { "name": "Retail",            "value": 112000, "share": 68.3 },
+        { "name": "Online",            "value": 75000,  "share": 45.7 },
+        { "name": "Contract",          "value": 54000,  "share": 32.9 }
+      ]
+    }
+  }
+  </script>
+
+</main>

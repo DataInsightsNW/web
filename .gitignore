@@ -1,0 +1,14 @@
+# This repository is PUBLIC — anything committed here is publicly browsable on
+# GitHub, whether or not GitHub Pages serves it. Keep business paperwork out.
+
+# Retainer, invoice and quote templates — local only
+paperwork/
+
+# Handover notes and internal working docs — local only
+_docs/
+
+# Local build and preview noise
+.DS_Store
+Thumbs.db
+*.tmp
+_probe.html
