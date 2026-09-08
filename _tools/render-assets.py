@@ -149,6 +149,21 @@ STACKED = """<!doctype html><meta charset="utf-8">""" + FONTS + """
 <div class="t2">by Aaron Chadburn</div>
 """
 
+
+# --- square logo, for structured data and directory listings -----------------
+# Google's Organization "logo" property and most directory uploads want a
+# roughly square image, so the 5:1 horizontal lockup gets cropped or ignored.
+# Emblem only, no wordmark: this is displayed small in a knowledge panel, where
+# text would be illegible. White ground rather than transparent, because search
+# surfaces and directories composite onto unpredictable backgrounds.
+SQUARE = """<!doctype html><meta charset="utf-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:512px;height:512px;background:#FFFFFF}
+  body{display:flex;align-items:center;justify-content:center}
+</style>
+""" + emblem(368)
+
 ICON = """<!doctype html><meta charset="utf-8">
 <style>*{margin:0;padding:0}html,body{width:180px;height:180px;overflow:hidden}</style>
 """ + emblem(180)
@@ -159,6 +174,7 @@ JOBS = [
     ("logo-lockup.png",   LOCKUP,  1000, 200, True),
     ("logo-stacked.png",  STACKED,  760, 420, True),
     ("app-icon-180.png",  ICON,     180, 180, False),
+    ("logo-square-512.png", SQUARE, 512, 512, False),
 ]
 
 
