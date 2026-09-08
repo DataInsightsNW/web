@@ -107,7 +107,14 @@ slug can never collide with them.
 4. **No analytics or tracking without updating `privacy.html` first.** The site currently sets no
    cookies, which is why it needs no cookie banner, and `privacy.html` and the FAQ both say so.
    Adding anything that tracks visitors makes both statements false.
-5. British English. The voice is "we" everywhere except `about.html`, which is deliberately "I".
+5. British English, and the business voice is **first person singular — "I", not "we"**. It's a
+   sole trader, and "we" reads as a fake agency. Two exceptions, both deliberate:
+   - **Client voice stays plural.** FAQ `<summary>` questions and their JSON-LD `"name"` fields
+     are the client asking ("Is our data kept confidential?"), as is quoted client speech
+     ("our reporting is a mess"). Never switch those.
+   - Watch to-be agreement: "I am", never "I are".
+   `_tools/switch-voice.py` did the original conversion and documents the masking rules if a
+   bulk change is ever needed again.
 
 ## After adding or renaming a page
 

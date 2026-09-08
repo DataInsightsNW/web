@@ -300,7 +300,7 @@
           form.reset();
           if (status) {
             status.innerHTML = '<strong>Thank you — your enquiry has been sent.</strong><br>' +
-              'We\'ll be in touch within one working day. A confirmation has gone to your email address.';
+              'I\'ll be in touch within one working day. A confirmation has gone to your email address.';
             status.className = 'form-status ok';
             status.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
           }
