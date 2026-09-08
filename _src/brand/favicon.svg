@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Data Insights North West">
   <title>Data Insights North West</title>
-  <!-- Mark: three ascending bars on an ink tile.
-       Geometry is symmetric on purpose — bars span x 6..26 inside a 32 grid,
-       so there is 6px of clear space each side and the mark still reads at 16px.
-       The gold bar is the apex, not decoration: green builds, gold is the result. -->
+  <!-- Contained version of the primary mark, for the browser tab, social avatar
+       and app icon. A tile beats an open mark in a tab strip at 16px.
+       The gold rule is the same device as the primary logo — not a dot — so the
+       favicon and the logo tell one story. Rule is 2.2 thick so it survives the
+       halving to 16px. -->
   <rect width="32" height="32" rx="7.5" fill="#0E1A24"/>
-  <rect x="6"    y="26.6" width="20"  height="1.2"  rx=".6"  fill="#fff" opacity=".18"/>
-  <rect x="6"    y="18"   width="5"   height="8"    rx="1.5" fill="#2FB574"/>
-  <rect x="13.5" y="12.5" width="5"   height="13.5" rx="1.5" fill="#2FB574"/>
-  <rect x="21"   y="7"    width="5"   height="19"   rx="1.5" fill="#F2C24B"/>
+  <polyline points="7,11.5 11.5,20 16,14 20.5,21.5 25,8.5"
+            fill="none" stroke="#2FB574" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6.5" y="24.4" width="19" height="2.2" rx="1.1" fill="#F2C24B"/>
 </svg>

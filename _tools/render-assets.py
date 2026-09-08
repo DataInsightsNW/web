@@ -30,13 +30,26 @@ FONTS = ('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          'family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700'
          '&display=block" rel="stylesheet">')
 
-MARK = """
+# The primary mark, open (no tile) — the W of "North West" as a data line on a
+# gold axis rule. `line` and `rule` are passed per context so the mark can be
+# stepped for a light or an ink background.
+MARK_OPEN = """
 <svg viewBox="0 0 32 32" width="{size}" height="{size}">
-  <rect width="32" height="32" rx="7.5" fill="{tile}"/>
-  <rect x="6" y="26.6" width="20" height="1.2" rx=".6" fill="#fff" opacity=".18"/>
-  <rect x="6" y="18" width="5" height="8" rx="1.5" fill="#2FB574"/>
-  <rect x="13.5" y="12.5" width="5" height="13.5" rx="1.5" fill="#2FB574"/>
-  <rect x="21" y="7" width="5" height="19" rx="1.5" fill="#F2C24B"/>
+  <polyline points="4,10 10,22 16,14 22,24 28,6"
+            fill="none" stroke="{line}" stroke-width="2.9"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="3" y="27.4" width="26" height="2.1" rx="1.05" fill="{rule}"/>
+</svg>
+"""
+
+# Contained version, for the app icon. Must match _src/brand/favicon.svg.
+MARK_TILE = """
+<svg viewBox="0 0 32 32" width="{size}" height="{size}">
+  <rect width="32" height="32" rx="7.5" fill="#0E1A24"/>
+  <polyline points="7,11.5 11.5,20 16,14 20.5,21.5 25,8.5"
+            fill="none" stroke="#2FB574" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="6.5" y="24.4" width="19" height="2.2" rx="1.1" fill="#F2C24B"/>
 </svg>
 """
 
@@ -82,7 +95,7 @@ SOCIAL = """<!doctype html><meta charset="utf-8">""" + FONTS + """
   <rect x="496" y="60" width="44" height="240" rx="6" fill="#F2C24B"/>
 </svg>
 <div class="top">
-  """ + MARK.format(size=68, tile="#16232E") + """
+  """ + MARK_OPEN.format(size=68, line="#2FB574", rule="#F2C24B") + """
   <div class="wm">
     <div class="t1">Data Insights</div>
     <div class="t2"><i></i><span>NORTH WEST</span></div>
@@ -105,7 +118,7 @@ LOCKUP = """<!doctype html><meta charset="utf-8">""" + FONTS + """
   .wm .t2 i{width:44px;height:3px;background:#C9A24A;display:block;border-radius:2px}
   .wm .t2 span{font-weight:600;font-size:26px;letter-spacing:.26em;color:#0F7A52}
 </style>
-""" + MARK.format(size=118, tile="#0E1A24") + """
+""" + MARK_OPEN.format(size=118, line="#0F7A52", rule="#C9A24A") + """
 <div class="wm">
   <div class="t1">Data Insights</div>
   <div class="t2"><i></i><span>NORTH WEST</span></div>
@@ -114,7 +127,7 @@ LOCKUP = """<!doctype html><meta charset="utf-8">""" + FONTS + """
 
 ICON = """<!doctype html><meta charset="utf-8">
 <style>*{margin:0;padding:0}html,body{width:180px;height:180px;overflow:hidden}</style>
-""" + MARK.format(size=180, tile="#0E1A24")
+""" + MARK_TILE.format(size=180)
 
 
 JOBS = [

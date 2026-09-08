@@ -74,6 +74,14 @@ slug can never collide with them.
 
 ## Conventions
 
+- **The logo mark is the letter W of "North West", drawn as a data line, sitting on a gold axis
+  rule.** Both halves are load-bearing: the zigzag is the initial *and* a chart, and the rule is
+  what stops it reading as merely a letter. Don't remove the rule, don't swap it for a dot, and
+  don't replace the mark with bars — ascending bars is the most generic logo in the analytics
+  category, which is what this replaced. Geometry is symmetric and tuned for 16px; the open
+  version (header, lockup) and the tiled version (favicon, avatar, app icon) must stay in step,
+  and the tile lives in three places: `_src/brand/favicon.svg`, `_src/partials/header.html` /
+  `footer.html` (inline), and `MARK_TILE` in `_tools/render-assets.py`.
 - Colours and type are tokens at the top of `_src/assets/styles.css`. Restyle there, never inline.
 - **Colour must carry meaning.** Green = primary/interactive/positive, amber = the "before" or
   manual state, red = loss or error. The stylesheet this replaced had alternating green/amber
