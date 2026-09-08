@@ -638,6 +638,16 @@ input[type="range"] { width: 100%; accent-color: var(--green); height: 26px; }
 footer.site { background: var(--ink); color: #fff; padding: 56px 0 30px; }
 footer.site .cols { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 36px; }
 footer.site .brand { color: #fff; font-size: 17px; }
+/* Byline sits under the footer wordmark, separated by the brand's gold rule —
+   the same device as the stacked lockup, so the two read as one identity. */
+footer.site .byline {
+  font-size: 14px; color: #93A5AD; margin-top: 12px; padding-top: 12px;
+  position: relative; max-width: 34ch;
+}
+footer.site .byline::before {
+  content: ''; position: absolute; top: 0; left: 0;
+  width: 30px; height: 2px; border-radius: 1px; background: #C9A24A;
+}
 footer.site .blurb { font-size: 14.5px; color: #93A5AD; margin-top: 14px; max-width: 34ch; }
 footer.site h4 { font-size: 13px; letter-spacing: .07em; text-transform: uppercase; color: #7C9099; font-family: var(--sans); font-weight: 600; margin-bottom: 14px; }
 footer.site ul { list-style: none; display: grid; gap: 9px; }

@@ -1,23 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Data Insights North West">
-  <title>Data Insights North West</title>
-  <!-- Primary horizontal lockup: the "W" mark + a two-line wordmark.
-       The mark is the W of "North West" drawn as a data line, sitting on a gold
-       axis rule — so it reads as the name and as a chart at the same time.
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 72" role="img" aria-label="Data Insights North West, by Aaron Chadburn">
+  <title>Data Insights North West — by Aaron Chadburn</title>
+  <!-- HORIZONTAL lockup. Use this wherever the space is wider than it is tall —
+       the website header, email footers, letterheads.
+       For a square space (social avatars, app icons) use logo-stacked.svg.
 
-       NOTE: the wordmark here is live <text>, so it depends on Space Grotesk and
-       Inter being installed on the viewer's machine. For anything external
-       (directories, invoices, email signatures) use assets/logo-lockup.png,
-       which has the fonts baked in. -->
-  <polyline points="8,22 16,42 24,29 32,42.5 40,17"
-            fill="none" stroke="#0F7A52" stroke-width="3.9"
-            stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="6.5" y="46.5" width="35" height="2.7" rx="1.35" fill="#C9A24A"/>
+       NOTE: the wordmark is live <text>, so it needs Space Grotesk and Inter
+       installed. For anything external use assets/logo-lockup.png, which has
+       the fonts baked in. -->
+  <g transform="translate(6,12) scale(1.5)">
+    <circle cx="16" cy="16" r="16" fill="#0E1A24"/>
+    <g stroke="#5B7382" stroke-width="1.5" fill="none">
+      <rect x="7.5" y="8.5" width="17" height="15" rx="1.4"/>
+      <path d="M16 8.5v15M7.5 16h17"/>
+    </g>
+    <polyline points="9.5,20 14,15 18.5,17.5 23,10.5"
+              fill="none" stroke="#2FB574" stroke-width="3.1"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="23" cy="10.5" r="3" fill="#F2C24B"/>
+  </g>
 
-  <text x="56" y="34"
+  <text x="68" y="35"
         font-family="'Space Grotesk','Segoe UI',system-ui,sans-serif"
-        font-size="21" font-weight="700" letter-spacing="-.55" fill="#0E1A24">Data Insights</text>
-  <rect x="57" y="40" width="14" height="1.6" rx=".8" fill="#C9A24A" opacity=".9"/>
-  <text x="76" y="45"
+        font-size="21" font-weight="700" letter-spacing="-.6" fill="#0E1A24">Data Insights North West</text>
+  <rect x="69" y="43" width="30" height="2" rx="1" fill="#C9A24A"/>
+  <text x="69" y="59"
         font-family="Inter,'Segoe UI',system-ui,sans-serif"
-        font-size="10.5" font-weight="600" letter-spacing="2.6" fill="#0F7A52">NORTH WEST</text>
+        font-size="12.5" font-weight="400" fill="#6E7F86">by Aaron Chadburn</text>
 </svg>

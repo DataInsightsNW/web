@@ -66,13 +66,20 @@
   <div class="wrap">
     <nav class="top" aria-label="Main">
       <a href="/" class="brand" aria-label="Data Insights North West — home">
-        <!-- Primary mark: the W of "North West" drawn as a data line on a gold
-             axis rule. Open (untiled) here because the header has room. -->
+        <!-- The emblem: a spreadsheet grid (the Excel idea) with a report line
+             and gold end-point rising through it (the Power BI idea). Drawn from
+             generic shapes — no Microsoft artwork. Keep in step with
+             _src/brand/favicon.svg. -->
         <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-          <polyline points="4,10 10,22 16,14 22,24 28,6"
-                    fill="none" stroke="#0F7A52" stroke-width="2.9"
+          <circle cx="16" cy="16" r="16" fill="#0E1A24"/>
+          <g stroke="#5B7382" stroke-width="1.5" fill="none">
+            <rect x="7.5" y="8.5" width="17" height="15" rx="1.4"/>
+            <path d="M16 8.5v15M7.5 16h17"/>
+          </g>
+          <polyline points="9.5,20 14,15 18.5,17.5 23,10.5"
+                    fill="none" stroke="#2FB574" stroke-width="3.1"
                     stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="3" y="27.4" width="26" height="2.1" rx="1.05" fill="#C9A24A"/>
+          <circle cx="23" cy="10.5" r="3" fill="#F2C24B"/>
         </svg>
         <span>Data Insights North West</span>
       </a>
@@ -323,16 +330,22 @@
     <div class="cols">
       <div>
         <a href="/" class="brand" aria-label="Data Insights North West — home">
-          <!-- Same mark, stepped for the ink background: brighter green, and the
-               gold rule at full strength rather than the muted print gold. -->
+          <!-- Same emblem, stepped for the ink background: the filled disc would
+               vanish here, so it becomes a ring. -->
           <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-            <polyline points="4,10 10,22 16,14 22,24 28,6"
-                      fill="none" stroke="#2FB574" stroke-width="2.9"
+            <circle cx="16" cy="16" r="15.2" fill="none" stroke="#33454F" stroke-width="1.4"/>
+            <g stroke="#5B7382" stroke-width="1.5" fill="none">
+              <rect x="7.5" y="8.5" width="17" height="15" rx="1.4"/>
+              <path d="M16 8.5v15M7.5 16h17"/>
+            </g>
+            <polyline points="9.5,20 14,15 18.5,17.5 23,10.5"
+                      fill="none" stroke="#2FB574" stroke-width="3.1"
                       stroke-linecap="round" stroke-linejoin="round"/>
-            <rect x="3" y="27.4" width="26" height="2.1" rx="1.05" fill="#F2C24B"/>
+            <circle cx="23" cy="10.5" r="3" fill="#F2C24B"/>
           </svg>
           <span>Data Insights North West</span>
         </a>
+        <p class="byline">by Aaron Chadburn</p>
         <p class="blurb">Power BI and Excel reporting, report automation and data analysis for businesses across Merseyside, the North West and UK-wide.</p>
       </div>
 

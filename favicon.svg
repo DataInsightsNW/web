@@ -1,13 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Data Insights North West">
   <title>Data Insights North West</title>
-  <!-- Contained version of the primary mark, for the browser tab, social avatar
-       and app icon. A tile beats an open mark in a tab strip at 16px.
-       The gold rule is the same device as the primary logo — not a dot — so the
-       favicon and the logo tell one story. Rule is 2.2 thick so it survives the
-       halving to 16px. -->
-  <rect width="32" height="32" rx="7.5" fill="#0E1A24"/>
-  <polyline points="7,11.5 11.5,20 16,14 20.5,21.5 25,8.5"
-            fill="none" stroke="#2FB574" stroke-width="3"
+  <!-- The emblem: a spreadsheet grid with a report line rising through it and a
+       gold end-point. The grid is the Excel idea, the line and gold point are
+       the Power BI idea — both drawn from generic shapes, so no Microsoft
+       artwork is used or implied anywhere.
+
+       The grid is 2x2, not 3x3, on purpose: five interior lines mushed together
+       at 16px, two survive. Grid stroke 1.5 and line 3.1 so the line and gold
+       point still carry the shape once the grid fades at favicon size. -->
+  <circle cx="16" cy="16" r="16" fill="#0E1A24"/>
+  <g stroke="#5B7382" stroke-width="1.5" fill="none">
+    <rect x="7.5" y="8.5" width="17" height="15" rx="1.4"/>
+    <path d="M16 8.5v15M7.5 16h17"/>
+  </g>
+  <polyline points="9.5,20 14,15 18.5,17.5 23,10.5"
+            fill="none" stroke="#2FB574" stroke-width="3.1"
             stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="6.5" y="24.4" width="19" height="2.2" rx="1.1" fill="#F2C24B"/>
+  <circle cx="23" cy="10.5" r="3" fill="#F2C24B"/>
 </svg>

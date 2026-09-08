@@ -74,14 +74,23 @@ slug can never collide with them.
 
 ## Conventions
 
-- **The logo mark is the letter W of "North West", drawn as a data line, sitting on a gold axis
-  rule.** Both halves are load-bearing: the zigzag is the initial *and* a chart, and the rule is
-  what stops it reading as merely a letter. Don't remove the rule, don't swap it for a dot, and
-  don't replace the mark with bars — ascending bars is the most generic logo in the analytics
-  category, which is what this replaced. Geometry is symmetric and tuned for 16px; the open
-  version (header, lockup) and the tiled version (favicon, avatar, app icon) must stay in step,
-  and the tile lives in three places: `_src/brand/favicon.svg`, `_src/partials/header.html` /
-  `footer.html` (inline), and `MARK_TILE` in `_tools/render-assets.py`.
+- **The emblem is a circular disc holding a spreadsheet grid with a report line and a gold
+  end-point rising through it.** The grid is the Excel idea, the line and gold point the Power BI
+  idea — drawn from generic shapes.
+  **Never rebuild this from Microsoft's actual Power BI or Excel artwork.** Those are registered
+  trademarks; their brand guidelines prohibit using their icons inside another logo, altering
+  them, or combining them into a new mark, and doing so invites a forced rebrand later plus a
+  false implication of official affiliation. The visual *language* — a green cell grid, gold
+  ascending data — is free to use; their files are not.
+  The grid is **2×2, not 3×3**: five interior lines mush together at 16px, two survive. Two
+  variants, one idea — a filled ink disc on light backgrounds, and a ring outline on ink, where a
+  filled disc would disappear.
+  The emblem geometry is duplicated in **six** places and they must stay in step:
+  `_src/brand/favicon.svg`, `logo.svg`, `logo-stacked.svg`, `_src/partials/header.html`,
+  `_src/partials/footer.html`, and `EMBLEM` in `_tools/render-assets.py`.
+- **Two lockups, one emblem.** `logo.svg` is horizontal, for the site header and any wide space.
+  `logo-stacked.svg` puts the emblem above the name for square spaces — social avatars, invoice
+  headers, business cards, print. Both carry the byline "by Aaron Chadburn" in sentence case.
 - Colours and type are tokens at the top of `_src/assets/styles.css`. Restyle there, never inline.
 - **Colour must carry meaning.** Green = primary/interactive/positive, amber = the "before" or
   manual state, red = loss or error. The stylesheet this replaced had alternating green/amber

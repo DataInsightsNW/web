@@ -30,28 +30,31 @@ FONTS = ('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
          'family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700'
          '&display=block" rel="stylesheet">')
 
-# The primary mark, open (no tile) — the W of "North West" as a data line on a
-# gold axis rule. `line` and `rule` are passed per context so the mark can be
-# stepped for a light or an ink background.
-MARK_OPEN = """
+# The emblem: a spreadsheet grid with a report line and gold end-point rising
+# through it. Grid = the Excel idea, line + point = the Power BI idea, both
+# drawn from generic shapes so no Microsoft artwork is used or implied.
+# `ring` swaps the filled ink disc for an outline, for use on ink backgrounds
+# where a filled disc would disappear.
+EMBLEM = """
 <svg viewBox="0 0 32 32" width="{size}" height="{size}">
-  <polyline points="4,10 10,22 16,14 22,24 28,6"
-            fill="none" stroke="{line}" stroke-width="2.9"
+  {disc}
+  <g stroke="#5B7382" stroke-width="1.5" fill="none">
+    <rect x="7.5" y="8.5" width="17" height="15" rx="1.4"/>
+    <path d="M16 8.5v15M7.5 16h17"/>
+  </g>
+  <polyline points="9.5,20 14,15 18.5,17.5 23,10.5"
+            fill="none" stroke="#2FB574" stroke-width="3.1"
             stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="3" y="27.4" width="26" height="2.1" rx="1.05" fill="{rule}"/>
+  <circle cx="23" cy="10.5" r="3" fill="#F2C24B"/>
 </svg>
 """
+DISC_SOLID = '<circle cx="16" cy="16" r="16" fill="#0E1A24"/>'
+DISC_RING  = '<circle cx="16" cy="16" r="15.2" fill="none" stroke="#33454F" stroke-width="1.4"/>'
 
-# Contained version, for the app icon. Must match _src/brand/favicon.svg.
-MARK_TILE = """
-<svg viewBox="0 0 32 32" width="{size}" height="{size}">
-  <rect width="32" height="32" rx="7.5" fill="#0E1A24"/>
-  <polyline points="7,11.5 11.5,20 16,14 20.5,21.5 25,8.5"
-            fill="none" stroke="#2FB574" stroke-width="3"
-            stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="6.5" y="24.4" width="19" height="2.2" rx="1.1" fill="#F2C24B"/>
-</svg>
-"""
+
+def emblem(size, on_dark=False):
+    return EMBLEM.format(size=size, disc=DISC_RING if on_dark else DISC_SOLID)
+
 
 # --- the social share card ---------------------------------------------------
 SOCIAL = """<!doctype html><meta charset="utf-8">""" + FONTS + """
@@ -69,7 +72,7 @@ SOCIAL = """<!doctype html><meta charset="utf-8">""" + FONTS + """
   .wm .t1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:34px;letter-spacing:-.03em}
   .wm .t2{display:flex;align-items:center;gap:11px;margin-top:9px}
   .wm .t2 i{width:26px;height:2px;background:#C9A24A;display:block;border-radius:1px}
-  .wm .t2 span{font-weight:600;font-size:15px;letter-spacing:.26em;color:#2FB574}
+  .wm .t2 span{font-weight:400;font-size:16px;color:#A9BAC1}
   h1{
     font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:60px;
     letter-spacing:-.032em;line-height:1.08;margin-top:auto;max-width:20ch;
@@ -95,10 +98,10 @@ SOCIAL = """<!doctype html><meta charset="utf-8">""" + FONTS + """
   <rect x="496" y="60" width="44" height="240" rx="6" fill="#F2C24B"/>
 </svg>
 <div class="top">
-  """ + MARK_OPEN.format(size=68, line="#2FB574", rule="#F2C24B") + """
+  """ + emblem(72, on_dark=True) + """
   <div class="wm">
-    <div class="t1">Data Insights</div>
-    <div class="t2"><i></i><span>NORTH WEST</span></div>
+    <div class="t1">Data Insights North West</div>
+    <div class="t2"><i></i><span>by Aaron Chadburn</span></div>
   </div>
 </div>
 <h1>The reports just arrive, correct, every time.</h1>
@@ -113,26 +116,48 @@ LOCKUP = """<!doctype html><meta charset="utf-8">""" + FONTS + """
   html,body{width:900px;height:200px;background:transparent}
   body{display:flex;align-items:center;gap:26px;padding:0 24px;font-family:Inter,sans-serif}
   .wm{display:flex;flex-direction:column;line-height:1}
-  .wm .t1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:62px;letter-spacing:-.032em;color:#0E1A24}
+  .wm .t1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:52px;letter-spacing:-.032em;color:#0E1A24;white-space:nowrap}
   .wm .t2{display:flex;align-items:center;gap:16px;margin-top:14px}
   .wm .t2 i{width:44px;height:3px;background:#C9A24A;display:block;border-radius:2px}
-  .wm .t2 span{font-weight:600;font-size:26px;letter-spacing:.26em;color:#0F7A52}
+  .wm .t2 span{font-weight:400;font-size:24px;color:#6E7F86}
 </style>
-""" + MARK_OPEN.format(size=118, line="#0F7A52", rule="#C9A24A") + """
+""" + emblem(118) + """
 <div class="wm">
-  <div class="t1">Data Insights</div>
-  <div class="t2"><i></i><span>NORTH WEST</span></div>
+  <div class="t1">Data Insights North West</div>
+  <div class="t2"><i></i><span>by Aaron Chadburn</span></div>
 </div>
+"""
+
+
+# --- the stacked lockup, transparent background ------------------------------
+STACKED = """<!doctype html><meta charset="utf-8">""" + FONTS + """
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:760px;height:420px;background:transparent}
+  body{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:Inter,sans-serif;gap:0;
+  }
+  .t1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:46px;
+      letter-spacing:-.032em;color:#0E1A24;margin-top:26px;white-space:nowrap}
+  .rule{width:74px;height:3px;background:#C9A24A;border-radius:2px;margin:18px 0 16px}
+  .t2{font-weight:400;font-size:22px;color:#6E7F86;white-space:nowrap}
+</style>
+""" + emblem(168) + """
+<div class="t1">Data Insights North West</div>
+<div class="rule"></div>
+<div class="t2">by Aaron Chadburn</div>
 """
 
 ICON = """<!doctype html><meta charset="utf-8">
 <style>*{margin:0;padding:0}html,body{width:180px;height:180px;overflow:hidden}</style>
-""" + MARK_TILE.format(size=180)
+""" + emblem(180)
 
 
 JOBS = [
     ("social-card.png",   SOCIAL,  1200, 630, False),
-    ("logo-lockup.png",   LOCKUP,   900, 200, True),
+    ("logo-lockup.png",   LOCKUP,  1000, 200, True),
+    ("logo-stacked.png",  STACKED,  760, 420, True),
     ("app-icon-180.png",  ICON,     180, 180, False),
 ]
 
